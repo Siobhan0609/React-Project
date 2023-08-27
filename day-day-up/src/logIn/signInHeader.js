@@ -1,20 +1,24 @@
 import React from "react";
 import './logIn.scss'
-import {Avatar} from "@mui/material";
+import {Avatar, Box, Typography} from "@mui/material";
 import {AssignmentInd} from "@mui/icons-material";
-import {deepPurple} from "@mui/material/colors";
 
 function SignInHeader() {
   return (
-      <div>
-        <div>
-          <Avatar sx={{bgcolor: deepPurple[500]}}>
+        <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+        >
+          <Avatar sx={{
+            bgcolor: '#9c27b0'
+          }}>
             <AssignmentInd/>
           </Avatar>
-        </div>
-        <div className='headerText'>Sign in
-        </div>
-      </div>
+         <Typography variant='h5'>Sign in</Typography>
+        </Box>
   )
 
 }
